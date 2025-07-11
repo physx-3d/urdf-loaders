@@ -370,6 +370,6 @@ document.addEventListener('WebComponentsReady', () => {
     viewer.addEventListener('manipulate-start', e => animToggle.classList.remove('checked'));
     viewer.addEventListener('urdf-processed', e => updateAngles());
     updateLoop();
-    viewer.camera.position.set(-5.5, 3.5, 5.5);
+    viewer.camera.position.set(-2.75, 1.75, 2.75);
 
 });
