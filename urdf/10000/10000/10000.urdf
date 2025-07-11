@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<robot name="scene">
+  <link name="l_world">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <link name="l_0">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.21616657919999993"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <link name="l_1">
+    <inertial>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.13302558719999996"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/1.obj"/>
+      </geometry>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <link name="l_2">
+    <inertial>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.029256811199999993"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/2.obj"/>
+      </geometry>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <link name="l_3">
+    <inertial>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.17761939199999996"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/3.obj"/>
+      </geometry>
+      <origin xyz="-0.6260819435119629 -0.3610650300979614 0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <joint name="fixed_1_2" type="fixed">
+    <parent link="l_1"/>
+    <child link="l_2"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="fixed_1_3" type="fixed">
+    <parent link="l_1"/>
+    <child link="l_3"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="joint_revolute_0_1" type="revolute">
+    <limit effort="2000.0" velocity="2.0" lower="-0.3141592653589793" upper="0.3141592653589793"/>
+    <parent link="l_0"/>
+    <child link="l_1"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0.6260819435119629 0.3610650300979614 -0.008297666907310486" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <link name="l_4">
+    <inertial>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.20558499839999994"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/4.obj"/>
+      </geometry>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <link name="l_5">
+    <inertial>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.0521520768"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/5.obj"/>
+      </geometry>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <link name="l_6">
+    <inertial>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+      <mass value="0.14568569279999993"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="objs/6.obj"/>
+      </geometry>
+      <origin xyz="0.665696918964386 -0.36135029792785645 -0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+    </visual>
+  </link>
+  <joint name="fixed_4_5" type="fixed">
+    <parent link="l_4"/>
+    <child link="l_5"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="fixed_4_6" type="fixed">
+    <parent link="l_4"/>
+    <child link="l_6"/>
+    <axis xyz="1. 0. 0."/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+  </joint>
+  <joint name="joint_revolute_0_4" type="revolute">
+    <limit effort="2000.0" velocity="2.0" lower="-0.3141592653589793" upper="0.3141592653589793"/>
+    <parent link="l_0"/>
+    <child link="l_4"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="-0.665696918964386 0.36135029792785645 0.010347697883844376" rpy="0.0 -0.0 0.0"/>
+  </joint>
+</robot>
